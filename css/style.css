@@ -1,68 +1,103 @@
-body{
-    font-family:arial,sans-serif;
-    background-color: #f4f4f4;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    height:100vh;
-    margin:0;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  background: url('images/transfer.png') no-repeat center center fixed; 
+  background-size: contain;
 }
-.container{
-    background-color: #fff;
-    padding:20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width:100%;
-    max-width:400px;
-    text-align:center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4B3F6B;
 }
-h1{
-    margin-bottom:20px;
-    font-size: 24px;
+.navbar a, .navbar button {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
-form{
-    display:flex;
-    flex-direction:column;
+.navbar .logo a {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
 }
-label{
-    margin-bottom: 5px;
-    text-align: left;
+.hero-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+  color: white;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #4B3F6B, #574E77);
 }
-input,select{
-    margin-bottom: 15px;
-    padding:10px;
-    border:1px solid #ccc;
-    border-radius:4px;
-    width:100px;
+.hero-text {
+  max-width: 50%;
 }
-button{
-    padding:10px;
-    background-color: orange;
-    color: #fff;
-    border:none;
-    border-radius:4px;
-    cursor:pointer;
+.hero-section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
 }
-button:hover{
-    background-color: #5f6560;
+.hero-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
 }
-#message{
-    margin-top:20px;
-    font-size:14px;
+.hero-form {
+  margin: auto;
+  max-width: 300px;
+  border:2px solid #0d0d0d;
+  padding:20px;
+  Background-color:#f0f0f0;
 }
-/* Responsiveness style*/
-@media(max-width:600px){
- .container{
-    padding: 15px;
-    width: 90%;
- }
+  .hero-form form {
+  display: flex;
+  flex-direction: column;
 }
-h1{
-    font-size: 20px;
+.hero-form h1, .hero-form p {
+  text-align: center;
+  color: #0d0d0d;
 }
-label{
-    font-size: 15px;
+.hero-section input, .hero-section select, .hero-section button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
 }
-input,select,button{
-    font-size: 14px;
+.hero-section button {
+  background-color: #22b573;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.hero-section button:hover {
+  background-color: #1d9a5b;
+}
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+.flags-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.flags-container a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.flags-container img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
 }
