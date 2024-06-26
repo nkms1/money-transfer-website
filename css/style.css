@@ -68,13 +68,17 @@ body, html {
   margin-bottom: 10px;
 }
 .hero-section button {
-  background-color: #22b573;
+  background-color: #4B3F6B;
   color: white;
   border: none;
   cursor: pointer;
+  Padding:10px 20px;
+  border-radius: 30px;
+  transition:background-color 0.3s;
 }
 .hero-section button:hover {
-  background-color: #1d9a5b;
+  background-color:transparent;
+  color:#0a0a0a;
 }
 footer {
   background-color: #333;
@@ -100,4 +104,113 @@ footer {
   width: 50px;
   height: auto;
   margin-right: 10px;
+}
+/* Small Screen  */
+@media(min-width: 576px) {
+  .container {
+      width: 540px;
+  }
+}
+
+/* Medium Screen  */
+@media(min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+
+/* Large Screen  */
+@media(min-width: 992px) {
+  .container {
+      width: 960px;
+  }
+}
+
+/* X-Large Screen  */
+@media(min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+
+/* XX-Large Screen  */
+@media(min-width: 1400px) {
+  .container {
+      width: 1320px;
+  }
+}
+/* Hamburger menu icon styles */
+.hamburger {
+  display: none; /* Hide by default on larger screens */
+}
+
+.hamburger i {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+}
+
+.nav-links a, .nav-links button {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.navbar .logo a {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon */
+    margin-left: auto; /* Push to the right */
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none; /* Hide navigation links by default */
+    width: 100%;
+    text-align: center;
+    background-color: #4B3F6B; /* Match navbar background */
+    position: absolute;
+    top: 60px; /* Adjust according to your navbar height */
+    left: 0;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  .nav-active {
+    display: block !important; /* Show when active */
+  }
+
+  /* Example: hide the last two links as the screen gets smaller */
+  @media (max-width: 768px) {
+    .nav-links a:nth-last-child(2),
+    .nav-links a:nth-last-child(3) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .nav-links a:nth-last-child(4),
+    .nav-links a:nth-last-child(5) {
+      display: none;
+    }
+  }
 }
