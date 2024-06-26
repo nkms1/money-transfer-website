@@ -5,18 +5,6 @@ menuBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
     menuBtn.classList.toggle('fa-times');
 });
-
-//Review JS Code
-let review = document.querySelector('#review'),
-    dots = document.querySelectorAll('#review-dots li'),
-    reviewContent = document.querySelectorAll('#review-content .review-box'),
-    leftArrow = document.querySelector('#left-arrow'),
-    rightArrow = document.querySelector('#right-arrow'),
-    reviewSpeed = 4500,
-    currentSlide = 0,
-    currentActive = 0,
-    reviewTimer;
-
 window.onload = function () {
     function playSlide(slide) {
         for (let i = 0; i < dots.length; i++) {
